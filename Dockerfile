@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-
+ 
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
