@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
- 
+
+MAINTAINER Craig Citro <craigcitro@google.com>
+
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
