@@ -4,6 +4,7 @@ MAINTAINER Nick Mote <njmote@gmail.com>
 
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        curl \
         python \
         && \
     apt-get clean && \
