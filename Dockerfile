@@ -1,16 +1,23 @@
 FROM ubuntu:14.04
 
-MAINTAINER Nick Mote <njmote@gmail.com>
-
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
         curl \
+        libfreetype6-dev \
+        libpng12-dev \
+        libzmq3-dev \
+        pkg-config \
         python \
+        python-dev \
+        rsync \
+        software-properties-common \
+        unzip \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -O https://raw.githubusercontent.com/njmote/ml-starter/master/support/get-pip.py && \
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
     rm get-pip.py
 
