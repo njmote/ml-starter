@@ -9,4 +9,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install \
     pandas \
+<<<<<<< HEAD
     pymysql
+=======
+    pymysql 
+>>>>>>> origin/master
