@@ -7,7 +7,5 @@ RUN apt-get update && apt-get install -y \
     python-dev 
 
 RUN pip install \
-    cryptography \
     pandas \
-    pymysql \
-    sshtunnel 
+    pymysql 
