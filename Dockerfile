@@ -63,5 +63,7 @@ EXPOSE 6006
 EXPOSE 8888
 
 WORKDIR "/"
+ 
+RUN chmod +x /run_jupyter.sh
 
 CMD ["/run_jupyter.sh"]
