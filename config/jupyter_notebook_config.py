@@ -13,6 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 import os
+from os import environ
 from IPython.lib import passwd
 
 c.NotebookApp.ip = '*'
@@ -20,6 +21,11 @@ c.NotebookApp.port = int(os.getenv('PORT', 8888))
 c.NotebookApp.open_browser = False
 c.MultiKernelManager.default_kernel_name = 'python2'
 c.NotebookApp.notebook_dir = '/notebooks'
- 
-# sets a password 
-c.NotebookApp.password = u'sha1:6b0cfc15af96:0dc3387e54a8b7ef6e89dfc2be0a642833d89a49'
+
+
+if environ.get('PASS') is not None:
+	
+    c.NotebookApp.password = os.getenv('PASS')
+    
+else:
+	c.NotebookApp.password = u'sha1:6b0cfc15af96:0dc3387e54a8b7ef6e89dfc2be0a642833d89a49'
